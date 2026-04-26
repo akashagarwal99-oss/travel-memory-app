@@ -3,7 +3,7 @@ const tripModel = require('../models/trip.model')
 async function tripAdditionController(req, res){
     console.log(req.body)
     try{
-        let tripDetail = tripModel.Trip({
+        let tripDetail = new tripModel.Trip({
             tripName: req.body.tripName,
             startDateOfJourney: req.body.startDateOfJourney,
             endDateOfJourney: req.body.endDateOfJourney,
